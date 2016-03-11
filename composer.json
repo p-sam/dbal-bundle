@@ -1,0 +1,21 @@
+{
+    "name": "p-sam/dbal-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony DBALBundle that wraps Doctrine DBAL",
+    "keywords": ["dbal", "doctrine"],
+    "homepage": "http://github.com/p-sam/dbal-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "p-sam",
+            "email": "p-sam@d3vs.net"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^2.5",
+        "doctrine/migrations": "^1.4"
+    },
+    "autoload": {
+        "psr-4": { "SP\\DBALBundle\\": "" }
+    }
+}

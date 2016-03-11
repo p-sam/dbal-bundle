@@ -1,0 +1,12 @@
+services:
+    db:
+        class: SP\DBALBundle\Service\DBALService
+        arguments: ["@?logger","@?debug.stopwatch"]
+        tags:
+            - { name: monolog.logger, channel: db }
+    db.query_collector:
+        class: SP\DBALBundle\DataCollector\QueryCollector
+        public: false
+        arguments: ["@?db"]
+        tags:
+            - { name: data_collector, template: 'DBALBundle:Profiler:collector', id: 'db' }
